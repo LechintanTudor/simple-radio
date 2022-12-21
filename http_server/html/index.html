@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Simple Radio</title>
+    </head>
+    <body>
+        <h1>Simple Radio</h1>
+        <audio id="audio-player" controls></audio>
+        <script src="https://cdn.dashjs.org/v4.5.2/dash.all.min.js"></script>
+        <script>
+            const url = "http://192.168.8.190:3000/stream";
+            const audioPlayerElement = document.getElementById('audio-player');
+            const mediaPlayer = dashjs.MediaPlayer().create(); 
+            mediaPlayer.initialize(audioPlayerElement, url, true);
+        </script>
+    </body>
+</html>
